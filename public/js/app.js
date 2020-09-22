@@ -6463,7 +6463,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".bd-placeholder-img {\n  font-size: 1.125rem;\n  text-anchor: middle;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n@media (min-width: 768px) {\n  .bd-placeholder-img-lg {\n    font-size: 3.5rem;\n  }\n}", ""]);
+exports.push([module.i, ".bd-placeholder-img {\n  font-size: 1.125rem;\n  text-anchor: middle;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n@media (min-width: 768px) {\n  .bd-placeholder-img-lg {\n    font-size: 3.5rem;\n  }\n}\n.select-person {\n  background-color: #c8c8c8;\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -6512,7 +6512,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "@keyframes spin {\r\n  from {\r\n    -webkit-transform: rotate(0deg);\r\n  }\r\n  to {\r\n    -webkit-transform: rotate(360deg);\r\n  }\r\n}\r\n@-webkit-keyframes spin {\r\n  from {\r\n    -webkit-transform: rotate(0deg);\r\n  }\r\n  to {\r\n    -webkit-transform: rotate(360deg);\r\n  }\r\n}\r\nbody {\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n#loadIcon {\r\n  margin: 60px auto;\r\n  height: 120px;\r\n  width: 120px;\r\n  position: relative;\r\n}\r\n#loadIcon div {\r\n  position: absolute;\r\n}\r\n#loadIcon div:first-child {\r\n  height: 120px;\r\n  width: 120px;\r\n  border-radius: 60px;\r\n  border-top: solid 10px #237699;\r\n  animation: spin 2s infinite;\r\n  -webkit-animation: spin 2s infinite;\r\n  animation-timing-function: linear;\r\n  -webkit-animation-timing-function: linear;\r\n}\r\n#loadIcon div:nth-child(2) {\r\n  height: 90px;\r\n  width: 90px;\r\n  border-radius: 45px;\r\n  border-top: solid 10px #6CC5EC;\r\n  top: 15px;\r\n  left: 15px;\r\n  animation: spin 1.5s infinite;\r\n  -webkit-animation: spin 1.5s infinite;\r\n  animation-timing-function: linear;\r\n  -webkit-animation-timing-function: linear;\r\n}\r\n#loadIcon div:nth-child(3) {\r\n  height: 60px;\r\n  width: 60px;\r\n  border-radius: 30px;\r\n  border-top: solid 10px #ACDFF6;\r\n  top: 30px;\r\n  left: 30px;\r\n  animation: spin 1s infinite;\r\n  -webkit-animation: spin 1s infinite;\r\n  animation-timing-function: linear;\r\n  -webkit-animation-timing-function: linear;\r\n}\r\n#loadIcon div:nth-child(4) {\r\n  height: 30px;\r\n  width: 30px;\r\n  border-radius: 15px;\r\n  border-top: solid 10px #D1EEFB;\r\n  top: 45px;\r\n  left: 45px;\r\n  animation: spin 0.5s infinite;\r\n  -webkit-animation: spin 0.5s infinite;\r\n  animation-timing-function: linear;\r\n  -webkit-animation-timing-function: linear;\r\n}\r\n", ""]);
+exports.push([module.i, "@keyframes spin {\n  from {\n    -webkit-transform: rotate(0deg);\n  }\n  to {\n    -webkit-transform: rotate(360deg);\n  }\n}\n@-webkit-keyframes spin {\n  from {\n    -webkit-transform: rotate(0deg);\n  }\n  to {\n    -webkit-transform: rotate(360deg);\n  }\n}\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n#loadIcon {\n  margin: 60px auto;\n  height: 120px;\n  width: 120px;\n  position: relative;\n}\n#loadIcon div {\n  position: absolute;\n}\n#loadIcon div:first-child {\n  height: 120px;\n  width: 120px;\n  border-radius: 60px;\n  border-top: solid 10px #237699;\n  animation: spin 2s infinite;\n  -webkit-animation: spin 2s infinite;\n  animation-timing-function: linear;\n  -webkit-animation-timing-function: linear;\n}\n#loadIcon div:nth-child(2) {\n  height: 90px;\n  width: 90px;\n  border-radius: 45px;\n  border-top: solid 10px #6CC5EC;\n  top: 15px;\n  left: 15px;\n  animation: spin 1.5s infinite;\n  -webkit-animation: spin 1.5s infinite;\n  animation-timing-function: linear;\n  -webkit-animation-timing-function: linear;\n}\n#loadIcon div:nth-child(3) {\n  height: 60px;\n  width: 60px;\n  border-radius: 30px;\n  border-top: solid 10px #ACDFF6;\n  top: 30px;\n  left: 30px;\n  animation: spin 1s infinite;\n  -webkit-animation: spin 1s infinite;\n  animation-timing-function: linear;\n  -webkit-animation-timing-function: linear;\n}\n#loadIcon div:nth-child(4) {\n  height: 30px;\n  width: 30px;\n  border-radius: 15px;\n  border-top: solid 10px #D1EEFB;\n  top: 45px;\n  left: 45px;\n  animation: spin 0.5s infinite;\n  -webkit-animation: spin 0.5s infinite;\n  animation-timing-function: linear;\n  -webkit-animation-timing-function: linear;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -72866,11 +72866,15 @@ var Notification = function Notification(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _sass_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../sass/style.scss */ "./resources/sass/style.scss");
+/* harmony import */ var _sass_style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_sass_style_scss__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 var ExerciseList = function ExerciseList(_ref) {
   var persons = _ref.persons,
-      selectPerson = _ref.selectPerson;
+      selectPerson = _ref.selectPerson,
+      state = _ref.state;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
     className: "table"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", {
@@ -72888,9 +72892,7 @@ var ExerciseList = function ExerciseList(_ref) {
   }, "Delete"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, persons.map(function (person, index) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
       key: person.id_person,
-      onClick: function onClick(e) {
-        return selectPerson(index, e, 0);
-      }
+      className: person.id_person === state.selectedPerson.id_person ? ' select-person' : ''
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
       scope: "row"
     }, index + 1), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, person.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, person.last_name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -73370,7 +73372,7 @@ var Admin = /*#__PURE__*/function (_Component) {
         last_name: '',
         years: '',
         img: '',
-        imgFile: '',
+        imgFile: null,
         phone: '',
         email: '',
         address: '',
@@ -73388,6 +73390,10 @@ var Admin = /*#__PURE__*/function (_Component) {
       notification: {
         title: '',
         message: ''
+      },
+      files: {
+        avatar: null,
+        avatar2: null
       }
     };
     _this.handleChangePerson = _this.handleChangePerson.bind(_assertThisInitialized(_this));
@@ -73396,6 +73402,7 @@ var Admin = /*#__PURE__*/function (_Component) {
     _this.deletePerson = _this.deletePerson.bind(_assertThisInitialized(_this));
     _this.getPerson = _this.getPerson.bind(_assertThisInitialized(_this));
     _this.cancelEditionPerson = _this.cancelEditionPerson.bind(_assertThisInitialized(_this));
+    _this.handleChangeFile = _this.handleChangeFile.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -73409,7 +73416,7 @@ var Admin = /*#__PURE__*/function (_Component) {
           last_name: '',
           years: '',
           img: '',
-          imgFile: '',
+          imgFile: null,
           phone: '',
           email: '',
           address: '',
@@ -73417,13 +73424,6 @@ var Admin = /*#__PURE__*/function (_Component) {
           linkedIn: ''
         }
       });
-    }
-  }, {
-    key: "selectPerson",
-    value: function selectPerson(index) {
-      console.log(index); // this.setState({
-      //
-      // })
     }
   }, {
     key: "componentDidMount",
@@ -73513,25 +73513,33 @@ var Admin = /*#__PURE__*/function (_Component) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                _context3.t0 = n;
-                _context3.next = _context3.t0 === 0 ? 3 : _context3.t0 === 1 ? 6 : _context3.t0 === 2 ? 11 : 14;
-                break;
+                console.log(index, e, n);
+                _context3.next = 3;
+                return this.setState({
+                  editPerson: true
+                });
 
               case 3:
-                _context3.next = 5;
+                _context3.t0 = n;
+                _context3.next = _context3.t0 === 0 ? 6 : _context3.t0 === 1 ? 10 : _context3.t0 === 2 ? 16 : 19;
+                break;
+
+              case 6:
+                console.log('Entro aqui111');
+                _context3.next = 9;
                 return this.setState({
                   person: this.state.persons[index],
                   message: '',
                   editPerson: false
                 });
 
-              case 5:
-                return _context3.abrupt("break", 15);
+              case 9:
+                return _context3.abrupt("break", 20);
 
-              case 6:
+              case 10:
                 //Edit
                 person = this.state.persons[index];
-                _context3.next = 9;
+                _context3.next = 13;
                 return this.setState({
                   selectedPerson: this.state.persons[index],
                   person: this.state.persons[index],
@@ -73539,28 +73547,26 @@ var Admin = /*#__PURE__*/function (_Component) {
                   editPerson: true
                 });
 
-              case 9:
-                // await this.setState({
-                // 	person: person
-                // })
+              case 13:
+                console.log('ok');
                 console.log(this.state); //await this.getPerson();
 
-                return _context3.abrupt("break", 15);
+                return _context3.abrupt("break", 20);
 
-              case 11:
-                _context3.next = 13;
+              case 16:
+                _context3.next = 18;
                 return this.setState({
                   selectedPerson: this.state.persons[index],
                   message: 'Are you sure you want to eliminate to ' + this.state.persons[index].name + '?'
                 });
 
-              case 13:
-                return _context3.abrupt("break", 15);
+              case 18:
+                return _context3.abrupt("break", 20);
 
-              case 14:
+              case 19:
                 return _context3.abrupt("return", false);
 
-              case 15:
+              case 20:
               case "end":
                 return _context3.stop();
             }
@@ -73730,24 +73736,33 @@ var Admin = /*#__PURE__*/function (_Component) {
             switch (_context7.prev = _context7.next) {
               case 0:
                 event.preventDefault();
-                this.setState({
-                  loading: true
-                });
                 person = this.state.person;
 
                 if (!(this.validateFormPerson(person) == false)) {
-                  _context7.next = 5;
+                  _context7.next = 4;
                   break;
                 }
 
                 return _context7.abrupt("return", false);
 
-              case 5:
+              case 4:
+                if (!(this.state.files.avatar == null || this.state.files.avatar == '')) {
+                  _context7.next = 7;
+                  break;
+                }
+
+                alert('El archivo no existe');
+                return _context7.abrupt("return", false);
+
+              case 7:
+                this.setState({
+                  loading: true
+                });
                 res = null;
-                _context7.prev = 6;
+                _context7.prev = 9;
 
                 if (!(this.state.editPerson == false)) {
-                  _context7.next = 15;
+                  _context7.next = 18;
                   break;
                 }
 
@@ -73759,16 +73774,16 @@ var Admin = /*#__PURE__*/function (_Component) {
                   },
                   body: JSON.stringify(person)
                 };
-                _context7.next = 11;
+                _context7.next = 14;
                 return fetch(_url__WEBPACK_IMPORTED_MODULE_4__["default"] + '/api/person', config);
 
-              case 11:
+              case 14:
                 res = _context7.sent;
                 console.log('await');
-                _context7.next = 19;
+                _context7.next = 22;
                 break;
 
-              case 15:
+              case 18:
                 _config = {
                   method: 'PUT',
                   headers: {
@@ -73777,17 +73792,17 @@ var Admin = /*#__PURE__*/function (_Component) {
                   },
                   body: JSON.stringify(person)
                 };
-                _context7.next = 18;
+                _context7.next = 21;
                 return fetch(_url__WEBPACK_IMPORTED_MODULE_4__["default"] + '/api/person/' + person.id_person, _config);
 
-              case 18:
+              case 21:
                 res = _context7.sent;
 
-              case 19:
-                _context7.next = 21;
+              case 22:
+                _context7.next = 24;
                 return res.json();
 
-              case 21:
+              case 24:
                 data = _context7.sent;
 
                 if (this.state.editPerson == false) {
@@ -73808,24 +73823,24 @@ var Admin = /*#__PURE__*/function (_Component) {
                   this.showNotification('Notification', 'Correctly Update Person');
                 }
 
-                _context7.next = 29;
+                _context7.next = 32;
                 break;
 
-              case 25:
-                _context7.prev = 25;
-                _context7.t0 = _context7["catch"](6);
+              case 28:
+                _context7.prev = 28;
+                _context7.t0 = _context7["catch"](9);
                 this.setState({
                   error: true,
                   loading: false
                 });
                 console.log(_context7.t0);
 
-              case 29:
+              case 32:
               case "end":
                 return _context7.stop();
             }
           }
-        }, _callee7, this, [[6, 25]]);
+        }, _callee7, this, [[9, 28]]);
       }));
 
       function submitCreatePerson(_x6) {
@@ -73847,19 +73862,22 @@ var Admin = /*#__PURE__*/function (_Component) {
     key: "convertImgBase64",
     value: function () {
       var _convertImgBase = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee8(img) {
-        var reader;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee8$(_context8) {
           while (1) {
             switch (_context8.prev = _context8.next) {
               case 0:
-                reader = new FileReader();
-                reader.readAsDataURL(file);
+                return _context8.abrupt("return", new Promise(function (resolve, reject) {
+                  var reader = new FileReader();
+                  reader.readAsDataURL(img);
 
-                reader.onload = function () {
-                  cb(reader.result);
-                };
+                  reader.onload = function () {
+                    resolve(reader.result);
+                  };
 
-              case 3:
+                  reader.onerror = reject;
+                }));
+
+              case 1:
               case "end":
                 return _context8.stop();
             }
@@ -73875,12 +73893,89 @@ var Admin = /*#__PURE__*/function (_Component) {
     }()
   }, {
     key: "handleChangePerson",
-    value: function handleChangePerson(e) {
-      this.setState({
-        person: _objectSpread(_objectSpread({}, this.state.person), {}, _defineProperty({}, e.target.name, e.target.value))
-      });
-      console.log(this.state.person);
-    }
+    value: function () {
+      var _handleChangePerson = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee9(e) {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee9$(_context9) {
+          while (1) {
+            switch (_context9.prev = _context9.next) {
+              case 0:
+                _context9.next = 2;
+                return this.setState({
+                  person: _objectSpread(_objectSpread({}, this.state.person), {}, _defineProperty({}, e.target.name, e.target.value))
+                });
+
+              case 2:
+                console.log('ok');
+                console.log(this.state);
+
+              case 4:
+              case "end":
+                return _context9.stop();
+            }
+          }
+        }, _callee9, this);
+      }));
+
+      function handleChangePerson(_x8) {
+        return _handleChangePerson.apply(this, arguments);
+      }
+
+      return handleChangePerson;
+    }()
+  }, {
+    key: "handleChangeFile",
+    value: function () {
+      var _handleChangeFile = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee10(e) {
+        var ImgBase64;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee10$(_context10) {
+          while (1) {
+            switch (_context10.prev = _context10.next) {
+              case 0:
+                if (!(e.target.files[0] != null)) {
+                  _context10.next = 10;
+                  break;
+                }
+
+                _context10.next = 3;
+                return this.setState({
+                  //loading : true,
+                  files: {
+                    avatar: e.target.files[0]
+                  }
+                });
+
+              case 3:
+                ImgBase64 = null;
+                _context10.next = 6;
+                return this.convertImgBase64(this.state.files.avatar);
+
+              case 6:
+                ImgBase64 = _context10.sent;
+                _context10.next = 9;
+                return this.setState({
+                  //loading: false,
+                  person: _objectSpread(_objectSpread({}, this.state.person), {}, {
+                    img: ImgBase64
+                  })
+                });
+
+              case 9:
+                console.log(this.state);
+
+              case 10:
+              case "end":
+                return _context10.stop();
+            }
+          }
+        }, _callee10, this);
+      }));
+
+      function handleChangeFile(_x9) {
+        return _handleChangeFile.apply(this, arguments);
+      }
+
+      return handleChangeFile;
+    }()
   }, {
     key: "render",
     value: function render() {
@@ -73897,7 +73992,8 @@ var Admin = /*#__PURE__*/function (_Component) {
         selectPerson: this.selectPerson,
         state: this.state,
         cancelEditionPerson: this.cancelEditionPerson,
-        updatePerson: this.updatePerson
+        updatePerson: this.updatePerson,
+        handleChangeFile: this.handleChangeFile
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_admin_Modal__WEBPACK_IMPORTED_MODULE_5__["default"], {
         message: this.state.message,
         deletePerson: this.deletePerson
@@ -73949,7 +74045,8 @@ function LoginContainer(_ref) {
       selectPerson = _ref.selectPerson,
       state = _ref.state,
       cancelEditionPerson = _ref.cancelEditionPerson,
-      updatePerson = _ref.updatePerson;
+      updatePerson = _ref.updatePerson,
+      handleChangeFile = _ref.handleChangeFile;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_helmet__WEBPACK_IMPORTED_MODULE_1__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
     charset: "utf-8"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
@@ -74149,9 +74246,8 @@ function LoginContainer(_ref) {
     type: "file",
     className: "form-control-file",
     id: "imgFile",
-    name: "imgFile",
-    value: person.imgFile,
-    onChange: handleChangePerson
+    name: "file",
+    onChange: handleChangeFile
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
     className: "mb-4"
   }), state.editPerson == false && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -74174,7 +74270,8 @@ function LoginContainer(_ref) {
     className: "col-md-6 order-md-2"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PersonList__WEBPACK_IMPORTED_MODULE_4__["default"], {
     persons: persons,
-    selectPerson: selectPerson
+    selectPerson: selectPerson,
+    state: state
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_admin_DescriptionPerson__WEBPACK_IMPORTED_MODULE_7__["default"], {
     person: person
   })))))));
@@ -74829,7 +74926,7 @@ var Portfolio = /*#__PURE__*/function (_Component) {
         className: "col-md-5 p-lg-5 mx-auto my-5"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         className: "display-4 font-weight-normal"
-      }, "Miguel Fletes Garcia"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      }, "Title"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "lead font-weight-normal"
       }, "And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple\u2019s marketing pages."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "btn btn-outline-secondary",
@@ -75001,8 +75098,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\porfolio\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\porfolio\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /opt/lampp/htdocs/Portfolio/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /opt/lampp/htdocs/Portfolio/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

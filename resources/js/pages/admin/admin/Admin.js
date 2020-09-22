@@ -18,7 +18,7 @@ class Admin extends Component{
 					last_name : '',
 					years : '',
 					img : '',
-					imgFile : '',
+					imgFile : null,
 					phone : '',
 					email : '',
 					address : '',
@@ -36,7 +36,11 @@ class Admin extends Component{
 			notification : {
 				title : '',
 				message : '',
-			}
+			},
+			files : {
+				avatar : null,
+				avatar2 : null
+			},
 		}
 
 		this.handleChangePerson = this.handleChangePerson.bind(this)
@@ -45,6 +49,7 @@ class Admin extends Component{
 		this.deletePerson = this.deletePerson.bind(this)
 		this.getPerson = this.getPerson.bind(this)
 		this.cancelEditionPerson = this.cancelEditionPerson.bind(this)
+		this.handleChangeFile = this.handleChangeFile.bind(this)
 	}
 
 	getRestorePerson(){
@@ -55,7 +60,7 @@ class Admin extends Component{
 				last_name : '',
 				years : '',
 				img : '',
-				imgFile : '',
+				imgFile : null,
 				phone : '',
 				email : '',
 				address : '',
@@ -63,14 +68,6 @@ class Admin extends Component{
 				linkedIn : ''
 			}
 		})
-	}
-
-
-	selectPerson(index){
-		console.log(index);
-		// this.setState({
-		//
-		// })
 	}
 
 	async componentDidMount(){
@@ -98,49 +95,46 @@ class Admin extends Component{
 	}
 
 	async selectPerson(index, e, n){
+		console.log(index, e, n)
+		await this.setState({
+			editPerson : true
+		});
 		switch (n) {
 			case 0:
+				console.log('Entro aqui111')
 				await this.setState({
 					person : this.state.persons[index],
 					message : '',
 					editPerson : false
 				})
 				break
-
 			case 1: //Edit
 				var person = this.state.persons[index]
-
 				await this.setState({
 					selectedPerson : this.state.persons[index],
 					person: this.state.persons[index],
 					message : '',
 					editPerson : true
 				})
-				// await this.setState({
-				// 	person: person
-				// })
+				console.log('ok')
 				console.log(this.state);
-				//await this.getPerson();
-			break
-
+					//await this.getPerson();
+				break
 			case 2:
 				await this.setState({
 					selectedPerson : this.state.persons[index],
 					message : 'Are you sure you want to eliminate to ' + this.state.persons[index].name +'?'
 				})
 			break
-
 			default:
 				return false
 		}
 	}
 
 	async deletePerson(){
-
 		this.setState({
 			loading : true
 		})
-
 		axios.delete(url + '/api/person/'+ this.state.selectedPerson.id_person).then(res => {
 			console.log(res.data)
 			this.setState({
@@ -159,7 +153,6 @@ class Admin extends Component{
 			})
 	    });
 	}
-
 
 	async getPerson(){
 		this.setState({
@@ -200,29 +193,29 @@ class Admin extends Component{
 
 	async showNotification(title, message){
 		console.log('show toast');
-
 		await this.setState({
 			notification: {
 				title: title,
 				message : message
 			}
 		})
-
 		$('#notificationToast').toast('show')
-
 	}
 
 	async submitCreatePerson(event){
 		event.preventDefault()
 
-		this.setState({
-			loading : true
-		})
 		let person = this.state.person;
 		if (this.validateFormPerson(person) == false) {
 			return false;
 		}
-
+		if (this.state.files.avatar == null || this.state.files.avatar == '') {
+			alert('El archivo no existe')
+			return false
+		}
+		this.setState({
+			loading : true
+		})
 		let res = null;
 		try{
 			if (this.state.editPerson == false) {
@@ -248,9 +241,7 @@ class Admin extends Component{
 	            }
 				res = await fetch(url + '/api/person/' + person.id_person, config)
 			}
-
             let data = await res.json()
-
 
 			if (this.state.editPerson == false) {
 				this.setState({
@@ -292,22 +283,51 @@ class Admin extends Component{
 
 
 	async convertImgBase64(img){
-		let reader = new FileReader();
-		reader.readAsDataURL(file)
-		reader.onload = function () {
-	        cb(reader.result)
-	    }
+		return new Promise((resolve, reject) => {
+			var reader = new FileReader();
+			reader.readAsDataURL(img);
+			reader.onload = function () {
+				resolve(reader.result);
+			};
+			reader.onerror = reject;
+		})
 	}
 
-	handleChangePerson(e){
-		this.setState({
+	async handleChangePerson(e){
+		await this.setState({
 			person : {
 				...this.state.person,
-				[e.target.name]: e.target.value
+				[e.target.name]: e.target.value,
 			}
 		})
-		console.log(this.state.person)
+		console.log('ok')
+		console.log(this.state)
 	}
+
+
+	async handleChangeFile(e){
+		if (e.target.files[0] != null) {
+			await this.setState({
+				//loading : true,
+				files : {
+					avatar : e.target.files[0]
+				}
+			})
+			let ImgBase64 = null
+			ImgBase64 = await this.convertImgBase64(this.state.files.avatar)
+			await this.setState({
+				//loading: false,
+				person: {
+					...this.state.person,
+					img : ImgBase64
+				}
+			})
+			console.log(this.state)
+		}
+
+	}
+
+
 
     render(){
 		if (this.state.loading == true) {
@@ -325,6 +345,7 @@ class Admin extends Component{
 						state={this.state}
 						cancelEditionPerson={this.cancelEditionPerson}
 						updatePerson={this.updatePerson}
+						handleChangeFile={this.handleChangeFile}
 					/>
 				<Modal message={this.state.message} deletePerson={this.deletePerson}/>
 			</Fragment >

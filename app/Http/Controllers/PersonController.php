@@ -56,6 +56,10 @@ class PersonController extends Controller
             return response()->json($data, 201);
         }
 
+
+        $image = $request->input('img'); // image base64 encoded
+        preg_match("/data:image\/(.*?);/",$image,$image_extension); // extract the image extension
+
         $user = new Person();
         $query = $user->create($request);
 

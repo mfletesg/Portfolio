@@ -7,7 +7,7 @@ import Notification from '../../../components/Notification'
 import NavBar from '../../../components/admin/NavBar'
 import DescriptionPerson from '../../../components/admin/DescriptionPerson'
 
-function LoginContainer({person, submitCreatePerson, handleChangePerson, persons, selectPerson, state, cancelEditionPerson, updatePerson}){
+function LoginContainer({person, submitCreatePerson, handleChangePerson, persons, selectPerson, state, cancelEditionPerson, updatePerson, handleChangeFile}){
     return(
         <Fragment>
 
@@ -99,7 +99,7 @@ function LoginContainer({person, submitCreatePerson, handleChangePerson, persons
                                         <div className="col-md-8 mb-3">
                                             <div className="form-group">
                                                 <label htmlFor="img">Image profile</label>
-                                                <input type="file" className="form-control-file" id="imgFile" name="imgFile" value={person.imgFile} onChange={handleChangePerson}/>
+                                                <input type="file" className="form-control-file" id="imgFile" name="file" onChange={handleChangeFile}/>
                                             </div>
                                         </div>
                                     </div>
@@ -123,7 +123,7 @@ function LoginContainer({person, submitCreatePerson, handleChangePerson, persons
                             </div>
 
                             <div className="col-md-6 order-md-2">
-                                <PersonList persons={persons} selectPerson={selectPerson}/>
+                                <PersonList persons={persons} selectPerson={selectPerson} state={state}/>
                                 <DescriptionPerson person={person} />
                             </div>
                         </div>

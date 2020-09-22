@@ -1,6 +1,8 @@
 import React, {Fragment} from 'react'
+import '../../sass/style.scss'
 
-const ExerciseList = ({persons, selectPerson}) => (
+
+const ExerciseList = ({persons, selectPerson, state}) => (
     <Fragment>
 
         <table className="table">
@@ -16,7 +18,7 @@ const ExerciseList = ({persons, selectPerson}) => (
             <tbody>
                 {
                     persons.map((person, index) => (
-                      <tr key={person.id_person} onClick={(e) => selectPerson(index, e,0)}>
+                      <tr key={person.id_person} className={(person.id_person === state.selectedPerson.id_person ? ' select-person' : '')}>
                         <th scope="row">{index+1}</th>
                         <td>{person.name}</td>
                         <td>{person.last_name}</td>
